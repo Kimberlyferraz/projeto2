@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento Violet Wave</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="calculator-card">
+    <header class="calculator-header">
+     <img src="logo.png" alt="Logo">
+      <p class="subtitle">Your vizion your wave</p>
+    </header>
+
+    <h2 class="glitch-title">ORÇAMENTO</h2>
+
+    <!-- FORMULÁRIO PARA ADICIONAR ITEM -->
+    <div class="item-form">
+      <div class="input-group">
+        <label for="produto">Produto / Serviço</label>
+        <input type="text" id="produto" placeholder="Nome do item" autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label for="valor">Valor (R$)</label>
+        <input type="number" id="valor" step="0.01" placeholder="00.00" autocomplete="off">
+      </div>
+
+      <button id="add-btn" class="vapor-button">Adicionar Item</button>
+    </div>
+
+    <!-- LISTA DE ITENS -->
+    <div class="lista-container">
+      <h3 class="lista-titulo">Itens do Orçamento</h3>
+      <ul id="lista-itens" class="lista-itens">
+        <li class="lista-vazia">Nenhum item adicionado ainda...</li>
+      </ul>
+    </div>
+
+    <!-- DESCONTO E TOTAL -->
+    <div class="desconto-container">
+      <div class="input-group">
+        <label for="desconto">Desconto (%)</label>
+        <input type="number" id="desconto" step="0.1" placeholder="0" autocomplete="off">
+      </div>
+      <button id="calc-btn" class="vapor-button">Calcular Total</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="result-container">
+      <span class="result-label">Subtotal:</span>
+      <div id="result-subtotal" class="result-display">0.00</div>
+    </div>
+
+    <div class="result-container">
+      <span class="result-label">Desconto:</span>
+      <div id="result-desconto" class="result-display">0.00</div>
+    </div>
+
+    <div class="result-container">
+      <span class="result-label">Total Final:</span>
+      <div id="result-total" class="result-display">0.00</div>
+    </div>
+
+    <script src="main.js"></script>
+  </main>
+
+</body>
+</html>
